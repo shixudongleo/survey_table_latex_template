@@ -1,0 +1,45 @@
+\documentclass{article}
+
+\clubpenalty=10000 
+\widowpenalty=10000
+
+\usepackage{color}
+\usepackage{booktabs}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{xspace}
+\usepackage{balance}
+\usepackage{booktabs}
+\usepackage{mathtools}
+\usepackage{slashbox}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{hhline}
+
+\def\TODO#1{\textcolor{red}{{\bf [TODO:}~#1{\bf ]}}}
+\def\NOTE#1{\textcolor{blue}{{\bf [NOTE:}~#1{\bf ]}}}
+\def\CHK#1 {\textcolor{magenta}{{\bf [CHK:}~#1{\bf ]}}}
+
+\def\Vec#1{{\boldsymbol{#1}}}
+\def\Mat#1{{\boldsymbol{#1}}}
+
+\graphicspath{{./figures/}}
+
+\newcommand{\fig}{{Figure}\@\xspace}
+\newcommand{\tab}{{Table}\@\xspace}
+\newcommand{\eqn}{{Equation}\@\xspace}
+\newcommand{\ie}{{i.e.,}\@\xspace}
+\newcommand{\eg}{{e.g.,}\@\xspace}
+\newcommand{\etal}{{\it et~al.}\@\xspace}
+
+
+\begin{document}
+
+\input{sec_table}
+
+\balance
+\bibliographystyle{abbrv}
+\bibliography{reference}
+
+\end{document}

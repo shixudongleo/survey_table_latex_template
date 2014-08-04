@@ -1,0 +1,146 @@
+
+As discussed in previous section, 
+instances collected from multiple modalities can be used for zero-shot person identification problem.
+In this section, 
+we design a domain-ontology for person identification problem that is useful for cyber-physical application.
+
+Three type of information source:
+{\bf (1)}~visual information,
+{\bf (2)}~audio information, and
+{\bf (3)}~text information.
+
+~
+
+The comparison between two instances of person ID can be performed on a choice of concept from the person identity specific ontology.
+Formally,
+an ontology is an explicit specification of a conceptualization~\cite{Gruber_IJHCS_1995},
+where the role of domain ontology is to describes the relationship within a specific domain.
+In the literature,
+Oslon studied the personal identity from the psychological perspective~\cite{Olson_encyclopedia_2009},
+where the problems of personal identity are related to a wide range of loosely connected questions~\cite{Olson_SEP_2012}.
+For example,
+{\it who am I?},
+{\it person hood},
+{\it persistence},
+{\it evidence},
+etc.
+An ontology of identity credentials can be found in~\cite{NIST_SP_800_103_2006},
+which considers the broadest possible range of identity credentials.
+Based on t
+
+%
+%  
+
+\begin{figure}[!t]
+  \begin{minipage}{1.0\columnwidth}
+    \begin{minipage}{1.0\columnwidth}
+      \begin{minipage}{0.03\columnwidth}  \centerline{\rotatebox{90}{Threshold-based Approach}}                                   \end{minipage}
+      \begin{minipage}{0.96\columnwidth}  \centerline{\includegraphics[width=1.0\linewidth]{person_identification_ROC_threshold}} \end{minipage}
+    \end{minipage}
+    \begin{minipage}{1.0\columnwidth}
+      \begin{minipage}{0.03\columnwidth}  \centerline{\rotatebox{90}{Fusion-based Approach}}                                      \end{minipage}
+      \begin{minipage}{0.96\columnwidth}  \centerline{\includegraphics[width=1.0\linewidth]{person_identification_ROC_fusion}}    \end{minipage}
+    \end{minipage}
+  \end{minipage}
+  \vspace{-3ex}
+  \caption
+    {
+    \small
+    ROC curve of person identification with YaleB and LFW dataset.
+    }
+  \label{fig:results_identification_ROC}
+\end{figure}
+
+\begin{figure*}[!t]
+  \centering
+  \begin{minipage}{2.0\columnwidth}  
+    \centerline{\includegraphics[width=1.0\linewidth]{yaleB_out/0_7_yaleB04.png}}  
+    \centerline{\includegraphics[width=1.0\linewidth]{yaleB_out/0_7_yaleB10.png}}  
+    \centerline{\includegraphics[width=1.0\linewidth]{yaleB_out/0_8_yaleB13.png}}  
+    \centerline{\includegraphics[width=1.0\linewidth]{yaleB_out/0_9_yaleB15.png}}
+    \centerline{\includegraphics[width=1.0\linewidth]{yaleB_out/1_0_yaleB09.png}}
+  \end{minipage}
+  \vspace{-2ex}
+  \caption
+    {
+    \small
+    Qualitative result of zero-shot person identification experiment with YaleB dataset.
+    \textcolor{blue}{Blue} and \textcolor{red}{red} indicate correct and incorrect identification,
+    respectively.
+    From top to bottom row, 
+    the {\small $F_1$}-score are 0.6, 0.7, 0.8, 0.9, and 1.0. 
+    }
+  \label{fig:results_identification_image_yaleB}
+  \vspace{4ex}
+% \end{figure*}
+% 
+% \begin{figure*}[!t]
+  \centering
+  \begin{minipage}{2.0\columnwidth}  
+    \centerline{\includegraphics[width=1.0\linewidth]{lfw_out/nan_Arnold_Schwarzenegger.png}}
+    \centerline{\includegraphics[width=1.0\linewidth]{lfw_out/0_1_Bill_Gates.png}}
+    \centerline{\includegraphics[width=1.0\linewidth]{lfw_out/0_2_Gonzalo_Sanchez_de_Lozada.png}}  
+    \centerline{\includegraphics[width=1.0\linewidth]{lfw_out/0_4_Trent_Lott.png}}
+    \centerline{\includegraphics[width=1.0\linewidth]{lfw_out/06_Jennifer_Aniston.png}}  
+    \centerline{\includegraphics[width=1.0\linewidth]{lfw_out/0_9_Hu_Jintao.png}}  
+    \centerline{\includegraphics[width=1.0\linewidth]{lfw_out/1_Jiang_Zemin.png}}
+  \end{minipage}
+  \vspace{-2ex}
+  \caption
+    {
+    \small
+    Qualitative result of zero-shot person identification experiment with LFW dataset.
+    \textcolor{blue}{Blue} and \textcolor{red}{red} indicate correct and incorrect identification,
+    respectively.
+    From top to bottom row, 
+    the {\small $F_1$}-score are 0, 0.1, 0.2, 0.4, 0.6, 0.9, and 1.0.
+    }
+  \label{fig:results_identification_image_LFW}
+\end{figure*}
+
+
+\begin{figure*}[!t]
+  \centering
+  \begin{minipage}{2.0\columnwidth}
+    \begin{minipage}{0.5\columnwidth}
+%       \begin{minipage}{0.03\columnwidth}  \centerline{\rotatebox{90}{Threshold-based Approach}}                                   \end{minipage}
+      \begin{minipage}{0.9\columnwidth}  \centerline{\includegraphics[width=1.0\linewidth]{person_identification_ROC_threshold}} \end{minipage}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.5\columnwidth}
+%       \begin{minipage}{0.03\columnwidth}  \centerline{\rotatebox{90}{Fusion-based Approach}}                                      \end{minipage}
+      \begin{minipage}{0.9\columnwidth}  \centerline{\includegraphics[width=1.0\linewidth]{person_identification_ROC_fusion}}    \end{minipage}
+    \end{minipage}
+  \end{minipage}
+  \vspace{-2ex}
+  \caption
+    {
+    \small
+    ROC curve of person identification with YaleB and LFW dataset using: 
+    ({\it left}) threshold-based approach and ({\it right}) fusion-based approach.
+    }
+  \label{fig:results_identification_ROC}
+\end{figure*}
+
+
+\begin{figure*}[!t]  
+  \centering
+  \begin{minipage}{2.0\columnwidth}
+    \begin{minipage}{0.4\columnwidth}
+      \centerline{\includegraphics[width=1.0\linewidth]{attribute_biometric}}
+      \centerline{\scriptsize {\bf (a) Biometric Attribute}}
+    \end{minipage}    
+    \hfill
+    \begin{minipage}{0.59\columnwidth}
+      \centerline{\includegraphics[width=0.83\linewidth]{attribute_non_biometric}}
+      \centerline{\scriptsize {\bf (b) Non-Biometric Attribute}}
+    \end{minipage}    
+  \end{minipage}
+  \vspace{-1ex}
+  \caption
+    {
+    \small
+    Type of attributes for the proposed human identification problem.
+    }
+  \label{fig:attribute_types}
+\end{figure*}
